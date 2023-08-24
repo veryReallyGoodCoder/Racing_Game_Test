@@ -10,7 +10,7 @@ public class MovementScript : MonoBehaviour
     [SerializeField] private float mSpeed = 5f;
     private Vector2 playerInput;
 
-    private void PlayerMove(InputAction.CallbackContext ctx)
+    public void PlayerMove(InputAction.CallbackContext ctx)
     {
         playerInput = ctx.ReadValue<Vector2>();
     }
@@ -25,7 +25,7 @@ public class MovementScript : MonoBehaviour
     void Update()
     {
 
-        Vector3 move = new Vector3(playerInput.x, 0, playerInput.y);
+        Vector3 move = new Vector3(playerInput.y, 0, playerInput.x * -1);
         controller.Move(move * Time.deltaTime * mSpeed);
 
     }
