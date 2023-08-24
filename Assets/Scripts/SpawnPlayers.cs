@@ -22,6 +22,7 @@ public class SpawnPlayers : MonoBehaviour
     {
         SpawnPlayerOne();
         SpawnPlayerTwo();
+
     }
 
 }

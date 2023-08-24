@@ -25,7 +25,7 @@ public class MovementScript : MonoBehaviour
     void Update()
     {
 
-        Vector3 move = new Vector3(playerInput.y, 0, playerInput.x * -1);
+        Vector3 move = new Vector3(playerInput.x, 0, playerInput.y);
         controller.Move(move * Time.deltaTime * mSpeed);
 
     }
