@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class CameraFollow : MonoBehaviour
         transform.position = smoothedPosition;
 
         transform.LookAt(target);
+
     }
 
 }

@@ -34,7 +34,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1095209569380136238}
   m_Father: {fileID: 5643090302135614669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4151431201265147046
@@ -146,9 +147,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf09d2d4d64aa0144ac5a463bfb709bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 0}
   mSpeed: 5
+  cSpeed: 5
   jumpHeight: 1
   gravityValue: -9.81
+  bulletSpeed: 10
+  bulletPrefab: {fileID: 4632176379512135524, guid: 37aba6af0c95aeb4ba6dc0a17a91ad03,
+    type: 3}
+  firePoint: {fileID: 1095209569380136238}
 --- !u!114 &237689146951376187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,11 +214,74 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 78d22ec5-3ea4-4d51-acfa-a5473f4e136e
     m_ActionName: Player/Jump[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 126062106302378428}
+        m_TargetAssemblyTypeName: MovementScript, Assembly-CSharp
+        m_MethodName: CameraMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 68c40abb-e963-470f-bef3-67f22b11df3f
+    m_ActionName: Player/Look[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 126062106302378428}
+        m_TargetAssemblyTypeName: MovementScript, Assembly-CSharp
+        m_MethodName: PlayerShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9b9571e2-534a-46ac-a043-c29bec749a89
+    m_ActionName: Player/Shoot[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 5285296164835781878}
+--- !u!1 &6259394717099951313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1095209569380136238}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1095209569380136238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6259394717099951313}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.069, y: 0, z: 0.763}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5398671073882995705}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6893742447524853198
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +408,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7829106488284764519}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &1712473465824444761
 MonoBehaviour:
   m_ObjectHideFlags: 0

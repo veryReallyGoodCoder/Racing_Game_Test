@@ -22,6 +22,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "68c40abb-e963-470f-bef3-67f22b11df3f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Value",
+                    "id": "9b9571e2-534a-46ac-a043-c29bec749a89",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -192,56 +210,56 @@
                 },
                 {
                     "name": "RightJoystick",
-                    "id": "eeeec45e-202e-4747-8802-ed4c7ea38afe",
+                    "id": "143b041e-178e-4d76-bb8c-66680a6fc2aa",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Look",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "up",
-                    "id": "03cbe888-43ea-4ae3-9128-7cab809fdbf5",
+                    "id": "bf2a3349-a672-4093-bb93-13f0074567d6",
                     "path": "<Gamepad>/rightStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Movement",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-                    "id": "411c5f06-70c6-48b7-a980-6691b3663a5a",
+                    "id": "715d589c-2d44-442c-821c-9000947edb87",
                     "path": "<Gamepad>/rightStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Movement",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-                    "id": "ae89b27d-b881-4af5-af0a-e1295014a705",
+                    "id": "0f59b5e4-614c-4adb-894b-f9f9665605d2",
                     "path": "<Gamepad>/rightStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Movement",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "2a4005fb-9c7e-43a6-8834-d292241b597f",
+                    "id": "9553549d-9da7-4a5e-93e6-0e2b75f0d48e",
                     "path": "<Gamepad>/rightStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Movement",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -255,6 +273,39 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a957905-a488-4148-b5aa-931a54869fbc",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player1;Player2",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "33d761c5-59af-4528-abaf-b414ea8025d9",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0df495c4-e0cc-41d2-b097-d24d8c50abd5",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player1",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
@@ -266,6 +317,11 @@
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
                     "isOptional": false,
                     "isOR": false
                 }
