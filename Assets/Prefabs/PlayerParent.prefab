@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4242469565108484928}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.2391996, y: 3.7193623, z: -6.3273907}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -147,6 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mSpeed: 5
+  jumpHeight: 1
+  gravityValue: -9.81
 --- !u!114 &237689146951376187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +191,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 47e60abb-735c-4abc-a525-77865fcec9ca
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 126062106302378428}
+        m_TargetAssemblyTypeName: MovementScript, Assembly-CSharp
+        m_MethodName: PlayerJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 78d22ec5-3ea4-4d51-acfa-a5473f4e136e
+    m_ActionName: Player/Jump[/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -219,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 6893742447524853198}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2391996, y: -3.1193624, z: 6.3273907}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

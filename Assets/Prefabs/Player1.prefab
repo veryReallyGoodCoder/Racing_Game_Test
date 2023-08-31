@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3117004635977430539}
   - component: {fileID: 1470283854758488754}
   - component: {fileID: 7251553999728925952}
+  - component: {fileID: 4932007985998245983}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -150,6 +151,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 47e60abb-735c-4abc-a525-77865fcec9ca
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 78d22ec5-3ea4-4d51-acfa-a5473f4e136e
+    m_ActionName: Player/Jump[/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Player1
   m_DefaultActionMap: Player
@@ -194,3 +199,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mSpeed: 5
+  jumpHeight: 1
+  gravityValue: -9.81
+--- !u!54 &4932007985998245983
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451949592205439185}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
